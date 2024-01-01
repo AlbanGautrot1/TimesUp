@@ -173,7 +173,7 @@ export default function Page() {
         "Martin Luther King", "Nelson Mandela", "Mozart", "J.F Kennedy", "Victor Hugo", "Molière", "Picasso",
         "William Shakespeare", "Pasteur", "Al Capone", "Gutenberg", "Gustave Eiffel", "Robespierre", "Charlemagne", "La reine Victoria"])
       console.log(names.length);
-      print(names.length);
+      
       setNames(currentNames => [...currentNames].sort(() => Math.random() - 0.5));
       setMotIndex(0)
     }

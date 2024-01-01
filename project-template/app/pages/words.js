@@ -20,3 +20,10 @@ export const randomWord = () => {
     wordlist.splice(random, 1);
     return temp;
     }
+    export default function page () {
+        return (
+            <div>
+                <h1>test</h1>
+            </div>
+        )
+    }

@@ -6,9 +6,6 @@ import { useState, useEffect } from 'react';
 import { randomWord } from './words.js';
 
 
-
-
-
 export default function Page() {
 
   const { profile } = useContext(UserContext)
@@ -17,7 +14,6 @@ export default function Page() {
   const [currentEquipe, setCurrentEquipe] = useState(1);
   const [motIndex, setMotIndex] = useState(0);
   const [WordQuantity, setWordQuantity] = useState(20);
-
   const [team, setteam] = useState([
     { equipe: 1, score: 0 },
     { equipe: 2, score: 0 },
@@ -212,10 +208,11 @@ export default function Page() {
           <button onClick={Liste6} className="px-4 py-2 bg-indigo-500 text-white font-semibold rounded hover:bg-indigo-600 transition duration-300">Mixte</button>
 
           <input type="range" min="1" max="90" value={timerSetting} onChange={handleSliderChange} className="w-full" />
-          <button onClick={updateTimer} className="px-4 py-2 bg-green-500 text-white font-semibold rounded hover:bg-green-600 transition duration-300">Set Timer</button>
+          <button onClick={updateTimer} className="px-4 py-2 bg-green-500 text-white font-semibold rounded hover:bg-green-600 transition duration-300">Set Timer {timerSetting}</button>
 
+          <p className="text-center text-gray-700">Nb mots: RandomWords</p>
           <input type="range" min="1" max="90" value={WordQuantity} onChange={handleSliderWordsChange} className="w-full" />
-          <button onClick={Liste7} className="px-4 py-2 bg-indigo-500 text-white font-semibold rounded hover:bg-indigo-600 transition duration-300">Random {WordQuantity}</button>
+          <button onClick={Liste7} className="px-4 py-2 bg-indigo-500 text-white font-semibold rounded hover:bg-indigo-600 transition duration-300">Random Words {WordQuantity}</button>
         </div>
 
         {/* Main Content */}
